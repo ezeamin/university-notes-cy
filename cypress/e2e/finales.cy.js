@@ -1,7 +1,7 @@
 import { materias } from '../../materias';
 
-describe('Cypress Test', () => {
-  it('Performs the required steps', () => {
+describe('FINALES', () => {
+  it('Detecta notas de examenes finales', () => {
     cy.visit('https://alumnos.unsta.edu.ar/index.php/login');
 
     // Input username
@@ -83,7 +83,7 @@ describe('Cypress Test', () => {
 
           cy.log('RESULTS:', results);
 
-          cy.request('POST', args.MAIL_URL, results);
+          cy.request('POST', `${args.MAIL_URL}/finales`, results);
         });
       });
   });

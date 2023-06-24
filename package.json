@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "materias": "cypress run --spec ./cypress/e2e/materia.cy.js"
+    "all": "cypress run",
+    "finales": "cypress run --spec ./cypress/e2e/finales.cy.js",
+    "parciales": "cypress run --spec ./cypress/e2e/parciales.cy.js"
   },
   "keywords": [],
   "author": "",

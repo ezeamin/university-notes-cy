@@ -37,11 +37,14 @@ describe('PARCIALES', () => {
 
     const request = { novedades: false };
     const MAIL_URL = Cypress.env('mailEndpoint');
-    cy.contains('div', 'NO SE REGISTRAN PARCIALES CARGADOS.').then(($element) => {
-      if (!$element || $element.length <= 0) {
-        request.novedades = true;
+    cy.contains('div', 'NO SE REGISTRAN PARCIALES CARGADOS.').then(
+      ($element) => {
+        if (!$element || $element.length <= 0) {
+          request.novedades = true;
+          // Only send mail with new info
+          cy.request('POST', `${MAIL_URL}/parciales`, request);
+        }
       }
-      cy.request('POST', `${MAIL_URL}/parciales`, request);
-    });
+    );
   });
 });

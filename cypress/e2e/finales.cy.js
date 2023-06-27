@@ -70,18 +70,20 @@ describe('FINALES', () => {
 
               let score = '';
 
-              if (matches[0] === 'A' || matches[0] === 'D') {
+              if (matches && (matches[0] === 'A' || matches[0] === 'D')) {
                 const scoreText = text.match(/\b(\d{1,2}\.\d{2})\b/g);
                 score = scoreText[0];
               }
 
               if (matches.length) {
-                results.push({ materia, state: matches[0], score });
+                let match = matches[0];
+                if(matches.length > 1){
+                  match = matches.at(-1);
+                }
+                results.push({ materia, state: match, score });
               }
             });
           });
-
-          cy.log('RESULTS:', results);
 
           cy.request('POST', `${args.MAIL_URL}/finales`, results);
         });

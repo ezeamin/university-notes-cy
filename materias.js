@@ -5,5 +5,4 @@ export const materias = [
   { id: '413', description: 'Ing. Software' },
   { id: '414', description: 'Teleinformática I' },
   { id: '415', description: 'Economía' },
-  { id: '512', description: 'Gestion ambiental' },
 ];

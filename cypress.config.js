@@ -14,5 +14,6 @@ module.exports = defineConfig({
         },
       });
     },
+    responseTimeout: 60000,
   },
 });

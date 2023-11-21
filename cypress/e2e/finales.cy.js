@@ -1,6 +1,6 @@
 import { materias } from '../../materias';
 
-describe('FINALES', () => {
+describe('FINALES', { testIsolation: true }, () => {
   it('Detecta notas de examenes finales', () => {
     cy.visit('https://alumnos.unsta.edu.ar/index.php/login');
 
@@ -77,7 +77,7 @@ describe('FINALES', () => {
 
               if (matches.length) {
                 let match = matches[0];
-                if(matches.length > 1){
+                if (matches.length > 1) {
                   match = matches.at(-1);
                 }
                 results.push({ materia, state: match, score });

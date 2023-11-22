@@ -1,6 +1,6 @@
 import { materias } from '../../materias';
 
-describe('FINALES', { testIsolation: true }, () => {
+describe('FINALES', { retries: 3 , testIsolation: true }, () => {
   it('Detecta notas de examenes finales', () => {
     cy.visit('https://alumnos.unsta.edu.ar/index.php/login');
 

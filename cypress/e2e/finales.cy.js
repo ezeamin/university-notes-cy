@@ -4,6 +4,9 @@ describe('FINALES', { retries: 3 , testIsolation: true }, () => {
   it('Detecta notas de examenes finales', () => {
     cy.visit('https://alumnos.unsta.edu.ar/index.php/login');
 
+    const MAIL_URL = Cypress.env('mailEndpoint');
+    cy.request("OPTIONS",`${MAIL_URL}/finales`)
+
     // Input username
     const username = Cypress.env('username');
     cy.get('input[name="signin[username]"]').type(username);

@@ -1,9 +1,9 @@
 // Set the subjects that should be analyzed.
 export const materias = [
-  { id: '401', description: 'Form. Humanística IV' },
-  { id: '421', description: 'Inteligencia Artificial' },
-  { id: '422', description: 'Sistemas Operativos' },
-  { id: '423', description: 'Compiladores y Trasladores' },
-  { id: '424', description: 'Teleinformática II' },
-  { id: '426', description: 'Org. Emp. e Industrial' },
+  { id: '511', description: 'Seminario Hum I' },
+  { id: '513', description: 'Ev. Sel. Eq. Hard.' },
+  { id: '515', description: 'Ingeniería de Soft. II' },
+  { id: '516', description: 'Auditoría de Sistemas' },
+  { id: '517', description: 'Legislación' },
+  { id: '518', description: 'Seguridad de Sistemas' },
 ];
